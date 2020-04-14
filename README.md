@@ -67,4 +67,4 @@ voted_{推し名}_{日付}.pngというスクリーンショットが保存さ�
 
 ## LICENSE
 
-[MIT LICENSE](https://github.com/kekeho/sanrio2020vote/LICENCE)
+[MIT LICENSE](https://github.com/kekeho/sanrio2020vote/blob/master/LICENSE)
