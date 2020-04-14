@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
 import json
+from datetime import datetime
 
 
 class SanrioVote():
@@ -27,6 +28,8 @@ class SanrioVote():
         # Enter to character page
         self.character_vote_dict[character_name].click()
 
+        time.sleep(1)
+
         print("Voting", character_name)
 
         # answer survey
@@ -43,6 +46,14 @@ class SanrioVote():
         # Vote
         vote_button = driver.find_element_by_class_name('form_voteButton')
         vote_button.click()  # Vote!
+
+        time.sleep(1)
+
+        # Screenshot
+        w = driver.execute_script('return document.body.scrollWidth;')
+        h = driver.execute_script('return document.body.scrollHeight;')
+        driver.set_window_size(w, h)
+        driver.save_screenshot(f"voted_{character_name}_{datetime.now()}.png")
 
 
 if __name__ == "__main__":
