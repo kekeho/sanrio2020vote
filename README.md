@@ -45,6 +45,8 @@ $ docker-compose build
 
 ## 投票
 
+ルール上, 一日1回まで.
+
 ```sh
 $ docker-compose up
 ```
